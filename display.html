@@ -1,0 +1,94 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         Page Configuration
+    ===================================================== -->
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>TVCompany Display</title>
+
+
+    <!-- =====================================================
+         Stylesheet
+    ===================================================== -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="display">
+
+    <!-- =====================================================
+         Main Display Screen
+    ===================================================== -->
+
+    <div id="screen">
+
+        <!-- Empty Content Message -->
+        <div id="empty">
+
+            No content saved on this device.
+
+            <a href="index.html">
+                Open Admin
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         Display Toolbar
+    ===================================================== -->
+
+    <div class="toolbar">
+
+        <!-- Admin Page -->
+        <a href="index.html">
+            Admin
+        </a>
+
+
+        <!-- Fullscreen Button -->
+        <button id="fullscreen">
+            Fullscreen
+        </button>
+
+
+        <!-- Refresh Content Button -->
+        <button id="refresh">
+            Refresh content
+        </button>
+
+
+        <!-- Content Counter -->
+        <span id="counter"></span>
+
+    </div>
+
+
+    <!-- =====================================================
+         JavaScript Files
+    ===================================================== -->
+
+    <!-- IndexedDB Database -->
+    <script src="db.js"></script>
+
+    <!-- Display Logic -->
+    <script src="display.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,682 @@
+
+/* =====================================================
+   Global Styles
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =====================================================
+   Admin Page
+===================================================== */
+
+.admin-page {
+    background: #f3f5f9;
+    color: #1f2937;
+    min-height: 100vh;
+    padding: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* =====================================================
+   Main Application Container
+===================================================== */
+
+.app-container {
+    width: 100%;
+    max-width: 760px;
+    background: #fff;
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .07);
+}
+
+
+/* =====================================================
+   Header
+===================================================== */
+
+.header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 15px;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 16px;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.header h1 {
+    font-size: 27px;
+    margin: 0 0 10px;
+}
+
+.header p {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0 0 20px;
+}
+
+
+/* =====================================================
+   Open Display Button
+===================================================== */
+
+.top-link {
+    display: inline-block;
+    background: #2563eb;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   Hover Effects
+===================================================== */
+
+.top-link:hover,
+button:hover,
+.browse-button:hover,
+.import:hover {
+    filter: brightness(.92);
+}
+
+
+/* =====================================================
+   Storage Information Card
+===================================================== */
+
+.settings-card {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 30px;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+    padding: 11px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.setting-item:last-child {
+    border: 0;
+}
+
+.setting-item span,
+.muted {
+    color: #6b7280;
+}
+
+.setting-item strong {
+    color: #111827;
+}
+
+
+/* =====================================================
+   Sections
+===================================================== */
+
+.section {
+    margin-top: 30px;
+}
+
+.section-heading {
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    font-size: 19px;
+    margin: 0 0 8px;
+}
+
+.section-heading p {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0;
+}
+
+
+/* =====================================================
+   File Upload Drop Zone
+===================================================== */
+
+.drop-zone {
+    border: 2px dashed #9ca3af;
+    border-radius: 14px;
+    padding: 32px 15px;
+    text-align: center;
+    background: #fafcff;
+    transition: .2s;
+}
+
+.drop-zone.drag-over {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+
+/* =====================================================
+   Hidden Elements
+===================================================== */
+
+.drop-zone[hidden],
+label[hidden],
+#fileRow[hidden],
+button[hidden] {
+    display: none !important;
+}
+
+
+/* =====================================================
+   Upload Icon
+===================================================== */
+
+.upload-icon {
+    font-size: 43px;
+    color: #2563eb;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   Drop Zone Text
+===================================================== */
+
+.drop-zone h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+.drop-zone p {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0 0 20px;
+}
+
+
+/* =====================================================
+   Buttons
+===================================================== */
+
+.browse-button,
+.import,
+button {
+    display: inline-block;
+    background: #2563eb;
+    color: #fff;
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   Selected File Name
+===================================================== */
+
+.file-name {
+    margin-top: 14px;
+    font-size: 12px;
+    color: #64748b;
+    overflow-wrap: anywhere;
+}
+
+
+/* =====================================================
+   Form Fields
+===================================================== */
+
+.form-fields {
+    margin-top: 20px;
+}
+
+.form-fields label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 14px 0;
+    color: #374151;
+}
+
+
+/* =====================================================
+   Form Inputs
+===================================================== */
+
+.form-fields input,
+.form-fields select,
+.form-fields textarea {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    border: 1px solid #d1d5db;
+    background: #fff;
+    color: #111827;
+    border-radius: 8px;
+    padding: 12px;
+    font: inherit;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   Input Focus Effects
+===================================================== */
+
+.form-fields input:focus,
+.form-fields select:focus,
+.form-fields textarea:focus {
+    outline: 2px solid #bfdbfe;
+    border-color: #2563eb;
+}
+
+
+/* =====================================================
+   Field Hint
+===================================================== */
+
+.field-hint {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+
+/* =====================================================
+   Two Column Form Layout
+===================================================== */
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+
+/* =====================================================
+   Form Action Buttons
+===================================================== */
+
+.form-actions,
+.actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.button-secondary {
+    background: #e8eef7;
+    color: #334155;
+}
+
+
+/* =====================================================
+   Status Messages
+===================================================== */
+
+.status {
+    font-size: 13px;
+    color: #166534;
+    min-height: 18px;
+    margin: 14px 0 0;
+}
+
+
+/* =====================================================
+   Content List
+===================================================== */
+
+.content-list {
+    display: grid;
+    gap: 10px;
+}
+
+
+/* =====================================================
+   Content Item
+===================================================== */
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    border: 1px solid #e5e7eb;
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+
+/* =====================================================
+   Content Preview
+===================================================== */
+
+.item-preview {
+    width: 72px;
+    height: 64px;
+    border-radius: 9px;
+    background: #dbeafe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    color: #2563eb;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.item-preview img,
+.item-preview video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   Content Information
+===================================================== */
+
+.item-info {
+    min-width: 0;
+    flex: 1;
+}
+
+.item-title {
+    font-size: 14px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.item-meta {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 5px;
+}
+
+
+/* =====================================================
+   Content Action Buttons
+===================================================== */
+
+.item-buttons {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.item-buttons button {
+    padding: 8px 10px;
+    font-size: 12px;
+}
+
+.item-buttons .delete-button {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+
+/* =====================================================
+   Empty Content List
+===================================================== */
+
+.empty-list {
+    text-align: center;
+    padding: 26px;
+    color: #6b7280;
+    background: #f8fafc;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   Muted Text
+===================================================== */
+
+.muted {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+
+/* =====================================================
+   Footer
+===================================================== */
+
+footer {
+    text-align: center;
+    margin-top: 32px;
+    color: #9ca3af;
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   Display Page
+===================================================== */
+
+.display {
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   Main Display Screen
+===================================================== */
+
+.display #screen {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   Display Images and Videos
+===================================================== */
+
+.display #screen img,
+.display #screen video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* =====================================================
+   News / Announcement Display
+===================================================== */
+
+.news {
+    max-width: 90%;
+    text-align: center;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.news h2 {
+    font-size: clamp(30px, 5vw, 80px);
+}
+
+.news p {
+    font-size: clamp(20px, 3vw, 46px);
+}
+
+
+/* =====================================================
+   Empty Display Message
+===================================================== */
+
+#empty {
+    font-size: 25px;
+    text-align: center;
+}
+
+
+/* =====================================================
+   Display Toolbar
+===================================================== */
+
+.toolbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #101a2dd9;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    opacity: .15;
+    transition: opacity .2s;
+}
+
+
+/* =====================================================
+   Toolbar Hover Effects
+===================================================== */
+
+.toolbar:hover,
+.toolbar:focus-within {
+    opacity: 1;
+}
+
+
+/* =====================================================
+   Toolbar Links and Buttons
+===================================================== */
+
+.toolbar a {
+    color: #fff;
+}
+
+.toolbar button {
+    padding: 8px 12px;
+}
+
+
+/* =====================================================
+   Slide Counter
+===================================================== */
+
+#counter {
+    margin-left: auto;
+}
+
+
+/* =====================================================
+   External Website Display
+===================================================== */
+
+.external {
+    font-size: clamp(20px, 3vw, 45px);
+    text-align: center;
+    padding: 30px;
+}
+
+.external a {
+    display: block;
+    margin: 20px;
+    color: #93c5fd;
+}
+
+
+/* =====================================================
+   Responsive Design - Mobile Devices
+===================================================== */
+
+@media (max-width: 600px) {
+
+    /* Admin Page */
+    .admin-page {
+        padding: 12px;
+    }
+
+
+    /* Main Container */
+    .app-container {
+        padding: 22px 16px;
+    }
+
+
+    /* Header */
+    .header h1 {
+        font-size: 23px;
+    }
+
+
+    /* Storage Information */
+    .setting-item {
+        font-size: 12px;
+    }
+
+
+    /* Upload Area */
+    .drop-zone {
+        padding: 28px 10px;
+    }
+
+
+    /* Form Layout */
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Content Items */
+    .item {
+        flex-wrap: wrap;
+    }
+
+
+    /* Content Buttons */
+    .item-buttons {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+}
