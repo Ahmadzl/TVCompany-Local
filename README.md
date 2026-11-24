@@ -1,19 +1,24 @@
-# TVCompany Local (no Supabase)
+# TVCompany Local — Light UI
 
-Static HTML/CSS/JavaScript application. Content, including image/video blobs, is stored in IndexedDB **on the device and in the browser profile where it was added**. No cloud database and no upload server. The shell is cached with a service worker for offline operation after first successful visit.
+Static HTML/CSS/JavaScript signage application. No Supabase, IIS or external database. Uses IndexedDB in the browser for content and a Service Worker for offline app-shell caching.
 
-## Deploy
-1. Upload all files to a public GitHub repository (or a private repository if your plan supports Pages).
-2. GitHub repository Settings → Pages → Deploy from branch → main / (root).
-3. Open `https://USERNAME.github.io/REPO/` on the display device.
-4. Add content using Admin on **that same device**, then open Display.
-5. Use Export backup and save the JSON file safely. Import on another device to copy the content.
+## Start
+
+1. Upload all files in this folder to a GitHub repository and enable GitHub Pages (Settings → Pages → Deploy from branch → main / root).
+2. Open `index.html` on the **same device and browser** used for playback.
+3. Add images, videos, announcements or external URLs. Set duration and order. Use Edit/Delete as needed.
+4. Open Display to show the slideshow. Use Fullscreen for a TV.
+5. Export backups regularly and keep them outside the browser. Import backups separately on other devices.
 
 ## Important limitations
-- This is a **single-device local content manager**, not a shared multi-device admin system.
-- No login/authentication: anyone using the same browser profile can edit the local content. GitHub Pages hosts public code, not a protected server.
-- The browser can evict IndexedDB and cache. Use Export backup; large videos may exceed device storage/quota. Request persistent storage if available.
-- Each device has its own content. Changes do not sync automatically.
-- External sites require internet. Popup blockers can prevent automatic windows. Browsers usually prohibit scripts from closing tabs they did not open; kiosk browser configuration may be needed.
-- Videos are muted for autoplay compatibility. Large videos can consume RAM during backup/export; avoid enormous backup files.
-- Use HTTPS via GitHub Pages, or localhost during development, for service workers and full browser functionality.
+
+- Each device/browser has its own local IndexedDB; content is **not synchronized** between devices. Browser storage may be cleared by the user or operating system. Persistent Storage reduces automatic eviction but is not a guarantee.
+- GitHub Pages hosts the site code; uploaded media stays on the device, not GitHub.
+- Displaying an external website via `window.open` may be blocked by popup policies, even if the site is allowed. External sites require internet.
+- There is **no authentication** in this local version. Anyone with access to this browser can edit its local content.
+- Use HTTPS (GitHub Pages) or localhost, not `file://`, for best IndexedDB/Service Worker support.
+- Backup files containing videos can be very large.
+
+## Design
+
+The admin page uses a light grey background, centered white card, blue actions and a dashed upload area inspired by the supplied PDF Label Converter styling. Display stays fullscreen and black.
